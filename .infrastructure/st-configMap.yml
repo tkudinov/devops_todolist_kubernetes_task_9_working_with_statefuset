@@ -5,6 +5,7 @@ metadata:
   namespace: mysql
 data:
   init.sql: |
+    CREATE USER 'app_user@'%' IDENTIFIED BY 'password';
     GRANT ALL PRIVILEGES ON app_db.* TO 'app_user'@'%';
     USE app_db;
     CREATE TABLE counter (
